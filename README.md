@@ -8,9 +8,11 @@ Aplicación web desarrollada bajo el patrón \*\*MVC\*\* combinado con \*\*CSR (
 
 \## Arquitectura del Sistema
 
+
+
 \* \*\*Backend:\*\* Spring Web MVC 6 \& REST Endpoints (Soporte XML/JSON)
 
 \* \*\*Persistencia:\*\* JDBC Nativo con MySQL
 
-\* \*\*Frontend:\*\* Servidores JSP e interactividad asíncrona mediante JavaScript
+\* \*\*Frontend:\*\* Servidores JSP e interactividad asíncrona mediante JavaScript (Fetch API)
 
