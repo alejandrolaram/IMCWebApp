@@ -18,25 +18,26 @@
                 <div class="card p-4 text-center">
                     <h2 class="text-success mb-4">¡Cálculo Exitoso!</h2>
                     
-                    <p class="fs-5">Hola <strong>${persona.nombre}</strong>, de acuerdo a tus datos:</p>
+                    <p class="fs-5">De acuerdo al peso de <strong>${medicion.peso} kg</strong> introducido:</p>
                     
                     <div class="my-4 p-3 bg-light rounded border">
                         <span class="text-muted d-block small text-uppercase">Tu Índice de Masa Corporal es</span>
-                        <h1 class="display-4 text-primary fw-bold">${String.format("%.2f", persona.imc)}</h1>
+                        <h1 class="display-4 text-primary fw-bold">${String.format("%.2f", medicion.imc)}</h1>
                     </div>
                     
                     <h4 class="mb-4">
-                        Estado: 
-                        <span class="badge ${persona.resultado == 'Normal' ? 'bg-success' : 'bg-warning text-dark'}">
-                            ${persona.resultado}
+                        Estado OMS: 
+                        <span class="badge ${medicion.resultado == 'Normal' ? 'bg-success' : 
+                                             (medicion.resultado == 'Sobrepeso' ? 'bg-warning text-dark' : 'bg-danger')}">
+                            ${medicion.resultado}
                         </span>
                     </h4>
                     
                     <div class="alert alert-info small" role="alert">
-                        Los datos han sido registrados correctamente en la base de datos de XAMPP de forma nativa.
+                        La medición ha sido enlazada a tu cuenta y registrada en la tabla histórica.
                     </div>
                     
-                    <a href="${pageContext.request.contextPath}/imc/formulario" class="btn btn-outline-primary w-100">Calcular de nuevo</a>
+                    <a href="${pageContext.request.contextPath}/imc/formulario" class="btn btn-primary w-100 py-2">Volver al Tablero / Ver Historial completo</a>
                 </div>
             </div>
         </div>
